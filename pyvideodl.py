@@ -17,10 +17,10 @@ links = soup.find_all("a")
 for link in links:
     href = link.get("href")
     if href.endswith(".flv") or href.endswith(".mp4") or href.endswith(".avi"):
-        # Download the video file
+# Download the video file
         video_data = requests.get(href)
 
-        # Save the video file to disk
+# Save the video file to disk
         with open("video.flv", "wb") as f:
             f.write(video_data.content)
 
