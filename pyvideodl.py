@@ -16,7 +16,7 @@ links = soup.find_all("a")
 # Iterate over the links and check if they point to a video file
 for link in links:
     href = link.get("href")
-    if href.endswith(".flv") or href.endswith(".mp4") or href.endswith(".avi"):
+    if href.endswith(".flv") or href.endswith(".mp4") or href.endswith(".avi") or href.endswith(".gif"):
 # Download the video file
         video_data = requests.get(href)
 
